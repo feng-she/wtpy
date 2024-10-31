@@ -74,7 +74,7 @@ def AES_Decrypt(key:str, data:str):
 
 
 # 获取文件最后N行的函数
-def get_tail(filename, N: int = 100, encoding="GBK"):
+def get_tail(filename, N: int = 100, encoding="UTF-8"):
     filesize = os.path.getsize(filename)
     blocksize = 10240
     dat_file = open(filename, 'r', encoding=encoding)
