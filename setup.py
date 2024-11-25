@@ -10,8 +10,8 @@ from setuptools import setup, find_packages, Command, Distribution
 
 NAME = 'wtpy'
 DESCRIPTION = 'Python Sub Framework Of WonderTrader'
-URL = 'https://github.com/wondertrader/wtpy'
-EMAIL = 'silencesword@foxmail.com'
+URL = 'https://github.com/feng-she/wtpy'
+EMAIL = 'chenpeijian90@gmail.com'
 AUTHOR = 'Wesley Liu'
 REQUIRES_PYTHON = '>=3.7.0'
 VERSION = '0.9.10'
