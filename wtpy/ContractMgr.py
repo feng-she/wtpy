@@ -71,9 +71,11 @@ class ContractMgr:
                     cInfo.shortMarginRatio = float(cObj["shortmarginratio"])
 
                 if "product" in cObj:
-                    cInfo.product = cObj["product"]                    
-                    #股票标准代码为SSE.000001，期货标准代码为SHFE.rb.2010
-                    if cInfo.code[:len(cInfo.product)] == cInfo.product:
+                    cInfo.product = cObj["product"]
+                    #股票标准代码为SSE.000001，期货标准代码为SHFE.rb.2010,股指期权遵循商品期权的方式，所以stdcode不包含product
+                    if cInfo.code[:len(cInfo.product)] == cInfo.product and cInfo.product in ['HO', 'MO', 'HO']:
+                        cInfo.stdCode = exchg + "." + cInfo.code
+                    elif cInfo.code[:len(cInfo.product)] == cInfo.product:
                         month = cInfo.code[len(cInfo.product):]
                         if len(month) < 4:
                             month = "2" + month
