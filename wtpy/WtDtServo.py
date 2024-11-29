@@ -94,8 +94,9 @@ class WtDtServo:
         获取K线数据
         @stdCode    标准合约代码
         @period     基础K线周期, m1/m5/d
-        @fromTime   开始时间, 日线数据格式yyyymmdd, 分钟线数据为格式为yyyymmddHHMM
-        @endTime    结束时间, 日线数据格式yyyymmdd, 分钟线数据为格式为yyyymmddHHMM, 为0则读取到最后一条
+        by cjp@20241129
+        @fromTime   开始时间, 日线,分钟线数据为格式为yyyymmddHHMM
+        @endTime    结束时间, 日线,分钟线数据为格式为yyyymmddHHMM, 为0则读取到最后一条
         '''        
         self.commitConfig()
 
